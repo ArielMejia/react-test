@@ -7,7 +7,7 @@ import Logo from './images/logo.svg';
 import './css/Header.css';
 
 class Header extends Component {
-  static PropTypes = {
+  static propTypes = {
     title: PropTypes.string.isRequired,
     items: PropTypes.array.isRequired
   };
@@ -28,7 +28,7 @@ class Header extends Component {
           <img src={Logo} className="App-logo" alt="logo" />
           <h2 className="App-title">{title}</h2>
 
-          <ul classname="Menu">
+          <ul className="Menu">
             {items && items.map((item, key)=><li key={key}>{item.title}</li>)}
           </ul>
         </header>
